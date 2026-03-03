@@ -216,11 +216,6 @@ MONGO_URI=your_mongodb_connection_string
 
 ## 📬 Contact
 
-**Dev Enterprises**
-- 📍 G.H. Society, Sakinaka, Mumbai – 400072
-- 📞 [+91 96995 72999](tel:+919699572999)
-- 📧 [deventp.fire@gmail.com](mailto:deventp.fire@gmail.com)
-- 🕐 Mon–Sat: 9:00 AM – 11:00 PM | Emergency: 24/7
 
 ---
 
