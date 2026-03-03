@@ -79,7 +79,7 @@ const FireSystem = () => {
               )}
 
               {/* Text Side */}
-              <div className={`md:w-1/2 order-2 ${index % 2 !== 0 ? 'md:order-1 md:pr-10' : 'md:order-2 md:pl-10'}`}>
+              <div className={`w-full md:w-1/2 order-2 ${index % 2 !== 0 ? 'md:order-1 md:pr-10' : 'md:order-2 md:pl-10'}`}>
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-6xl font-black text-white/5 opacity-50">0{index + 1}</span>
                   <h2 className="text-4xl font-bold text-white group-hover:text-brand-red transition-colors">{system.title}</h2>
@@ -109,9 +109,9 @@ const FireSystem = () => {
               </div>
 
               {/* Image Side */}
-              <div className={`md:w-1/2 order-1 ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'} group relative`}>
+              <div className={`w-full md:w-1/2 order-1 ${index % 2 !== 0 ? 'md:order-2' : 'md:order-1'} group relative`}>
                 <div className="absolute -inset-2 bg-gradient-to-r from-brand-red to-transparent opacity-0 group-hover:opacity-30 rounded-2xl blur-xl transition-all duration-700"></div>
-                <div className="relative h-[450px] overflow-hidden rounded-2xl border border-white/10 p-2 bg-[#111]">
+                <div className="relative h-64 sm:h-80 md:h-[450px] w-full overflow-hidden rounded-2xl border border-white/10 p-2 bg-[#111]">
                   <img
                     src={system.img}
                     alt={system.title}

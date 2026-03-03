@@ -12,6 +12,7 @@ import BusinessAssociates from './pages/BusinessAssociates';
 import ContactUs from './pages/ContactUs';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingPhoneIcon from './components/FloatingPhoneIcon';
+import PageTransition from './components/PageTransition';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -19,12 +20,12 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/our-products" element={<OurProducts />} />
-        <Route path="/fire-system" element={<FireSystem />} />
-        <Route path="/business-associates" element={<BusinessAssociates />} />
-        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/" element={<PageTransition><Home /></PageTransition>} />
+        <Route path="/about-us" element={<PageTransition><AboutUs /></PageTransition>} />
+        <Route path="/our-products" element={<PageTransition><OurProducts /></PageTransition>} />
+        <Route path="/fire-system" element={<PageTransition><FireSystem /></PageTransition>} />
+        <Route path="/business-associates" element={<PageTransition><BusinessAssociates /></PageTransition>} />
+        <Route path="/contact-us" element={<PageTransition><ContactUs /></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );
