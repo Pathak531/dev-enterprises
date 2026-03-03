@@ -10,11 +10,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect MongoDB (for Vercel)
 mongoose
   .connect(process.env.MONGO_URI || "")
-  .then(() => console.log("Connected to MongoDB ✅"))
-  .catch((err) => console.error("MongoDB connection error ❌", err));
+  .then(() => console.log("MongoDB connected ✅"))
+  .catch((err) => console.log(err));
 
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀");
