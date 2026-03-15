@@ -68,7 +68,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-24 bg-[#141414]">
+      <section id="services" className="py-24 bg-[#141414]">
         <div className="container mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our <span className="text-brand-red">Services</span></h2>

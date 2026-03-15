@@ -1,6 +1,6 @@
 import { useRef, useEffect, useContext } from 'react';
 import { motion, useInView, useMotionValue, useTransform, animate, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ShieldCheck, Flame, Factory, Users } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Flame, Factory, Users, HardHat, FileText, Component, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedPage from '../components/AnimatedPage';
 import { SplashContext } from '../contexts/SplashContext';
@@ -23,6 +23,15 @@ const clients = [
   "https://www.hotelhost-inn.com/images/index_05.jpg",
   "https://scontent-bom5-1.xx.fbcdn.net/v/t39.30808-6/229873741_107114181672470_1284748753158584253_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=hd8OvKy0pqcQ7kNvwE1Gx54&_nc_oc=AdmlL0We7lLDGkUWB8kGbStkfGT3E-f4UW13NYG9ax7HgfXR--DsSzF_-hiaWb3s62ymk8nMSt_iVOq5aB7MfBys&_nc_zt=23&_nc_ht=scontent-bom5-1.xx&_nc_gid=6skPmxiOj1wfdZmWHNWSqw&_nc_ss=8&oh=00_AfyM-Qt9z45mqBcLEQXTqg9y8RqQZiG5zdm6kbf4GxDBOA&oe=69AB01FF",
   "https://ajmera.com/wp-content/uploads/2023/08/ajmera-new-logo.png"
+];
+
+const mainServices = [
+  { icon: ShieldCheck, title: "Annual Maintenance Contract (AMC)" },
+  { icon: HardHat, title: "Fire Marshal Supply & Professional Training" },
+  { icon: Flame, title: "Fire Mock Drill Planning & Execution" },
+  { icon: FileText, title: "Fire Safety Consultancy & Licensing" },
+  { icon: Component, title: "Fire System Diagram & Design" },
+  { icon: Wrench, title: "Complete Range of Fire Fighting Equipment" }
 ];
 
 const staggerChildren = {
@@ -286,6 +295,70 @@ const Home = () => {
                       <p className="text-gray-300 font-medium tracking-widest uppercase text-sm">{stat.label}</p>
                     </motion.div>
                   ))}
+                </div>
+
+                {/* Our Services Section */}
+                <div className="mb-24">
+                  <div className="text-center mb-16">
+                    <motion.h4
+                      initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                      className="text-brand-red font-bold uppercase tracking-wider text-sm mb-2"
+                    >
+                      Our Expertise
+                    </motion.h4>
+                    <motion.h2
+                      initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+                      className="text-4xl font-bold"
+                    >
+                      Our Services
+                    </motion.h2>
+                  </div>
+
+                  <motion.div
+                    variants={staggerChildren}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-50px" }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                  >
+                    {mainServices.map((service, idx) => (
+                      <motion.div
+                        key={idx}
+                        variants={fadeIn}
+                        whileHover={{ y: -5, scale: 1.02 }}
+                        className="bg-brand-black/50 backdrop-blur-sm p-6 rounded-xl border border-white/5 shadow-lg relative group overflow-hidden flex items-start gap-4 hover:border-brand-red/50 transition-all duration-300"
+                      >
+                        <div className="w-12 h-12 rounded-full bg-brand-red/10 flex items-center justify-center shrink-0 group-hover:bg-brand-red/20 transition-colors">
+                          <service.icon className="w-6 h-6 text-brand-red" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-100 leading-snug group-hover:text-white transition-colors">
+                            {service.title}
+                          </h3>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mt-12"
+                  >
+                    <Link
+                      to="/about-us#services"
+                      className="inline-flex items-center gap-2 text-brand-white font-bold hover:text-brand-red transition-colors pt-4 border-b-2 border-transparent hover:border-brand-red pb-1"
+                      onClick={(e) => {
+                        if (window.location.pathname === '/about-us') {
+                          e.preventDefault();
+                          document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                    >
+                      Read More <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </motion.div>
                 </div>
 
                 <motion.div
