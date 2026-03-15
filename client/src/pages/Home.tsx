@@ -11,7 +11,7 @@ const fadeIn = {
 };
 
 const clients = [
-  "https://findmumbai.com/wp-content/uploads/2020/10/ORION-MUKTA-A2-CINEMAS.jpg",
+  "https://tse4.mm.bing.net/th/id/OIP.58PtnhD-JZMCMaPEhjMK6QHaDt?pid=Api&P=0&h=180",
   "https://content.jdmagicbox.com/v2/comp/mumbai/r2/022pxx22.xx22.160223120746.t5r2/catalogue/siddhitech-homes-pvt-ltd-head-office-prabhadevi-mumbai-builders-cxvev4f001-250.jpg",
   "https://3.imimg.com/data3/JL/VM/MY-4921103/filtereno-engineering-company-logo.jpg",
   "https://www.thelegendhotel.in/images/logo.png",
@@ -22,7 +22,11 @@ const clients = [
   "https://assets.nobroker.in/media/building/8a9f92039006f8cf0190072c88ac1732/logo/8a9f92039006f8cf0190072c88ac1732_logo_mmy4sFWJbV1721903213486.jpg",
   "https://www.hotelhost-inn.com/images/index_05.jpg",
   "https://scontent-bom5-1.xx.fbcdn.net/v/t39.30808-6/229873741_107114181672470_1284748753158584253_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=hd8OvKy0pqcQ7kNvwE1Gx54&_nc_oc=AdmlL0We7lLDGkUWB8kGbStkfGT3E-f4UW13NYG9ax7HgfXR--DsSzF_-hiaWb3s62ymk8nMSt_iVOq5aB7MfBys&_nc_zt=23&_nc_ht=scontent-bom5-1.xx&_nc_gid=6skPmxiOj1wfdZmWHNWSqw&_nc_ss=8&oh=00_AfyM-Qt9z45mqBcLEQXTqg9y8RqQZiG5zdm6kbf4GxDBOA&oe=69AB01FF",
-  "https://ajmera.com/wp-content/uploads/2023/08/ajmera-new-logo.png"
+  "https://ajmera.com/wp-content/uploads/2023/08/ajmera-new-logo.png",
+  "https://static.vecteezy.com/system/resources/previews/020/190/432/original/hdfc-logo-hdfc-icon-free-free-vector.jpg",
+  "https://radhagroup.org.in/wp-content/uploads/2025/12/logo.png",
+  "https://tse3.mm.bing.net/th/id/OIP.ekkCK_gW2v1ZTlEsWA7ifgHaHa?pid=Api&P=0&h=180",
+  "https://tse1.mm.bing.net/th/id/OIP.pdZ0HXsqVW6MKwPzBRP7zAAAAA?pid=Api&P=0&h=180"
 ];
 
 const mainServices = [
